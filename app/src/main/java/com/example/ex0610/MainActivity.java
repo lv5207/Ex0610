@@ -1,5 +1,6 @@
 package com.example.ex0610;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,5 +42,21 @@ private LinearLayout llMain;
         boolean tbOn = tb.isChecked();
         boolean swOn = sw.isChecked();
 
+        if(tbOn && swOn)
+        {
+            llMain.setBackgroundColor(Color.GREEN);
+        }
+        else if(tbOn && !swOn)
+        {
+            llMain.setBackgroundColor(Color.BLUE);
+        }
+        else if(!tbOn && swOn)
+        {
+            llMain.setBackgroundColor(Color.YELLOW);
+        }
+        else
+        {
+            llMain.setBackgroundColor(Color.RED);
+        }
     }
 }
